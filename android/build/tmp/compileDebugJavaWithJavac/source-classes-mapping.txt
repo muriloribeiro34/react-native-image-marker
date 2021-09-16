@@ -1,0 +1,19 @@
+com/jimmydaddy/imagemarker/ImageMarkerManager.java
+ com.jimmydaddy.imagemarker.ImageMarkerManager
+ com.jimmydaddy.imagemarker.ImageMarkerManager$1
+ com.jimmydaddy.imagemarker.ImageMarkerManager$2
+ com.jimmydaddy.imagemarker.ImageMarkerManager$3
+ com.jimmydaddy.imagemarker.ImageMarkerManager$4
+ com.jimmydaddy.imagemarker.ImageMarkerManager$5
+com/jimmydaddy/imagemarker/Position.java
+ com.jimmydaddy.imagemarker.Position
+com/jimmydaddy/imagemarker/ImageMarkerPackage.java
+ com.jimmydaddy.imagemarker.ImageMarkerPackage
+com/jimmydaddy/imagemarker/ShadowLayerStyle.java
+ com.jimmydaddy.imagemarker.ShadowLayerStyle
+com/jimmydaddy/imagemarker/TextBackgroundStyle.java
+ com.jimmydaddy.imagemarker.TextBackgroundStyle
+com/jimmydaddy/imagemarker/Utils.java
+ com.jimmydaddy.imagemarker.Utils
+com/jimmydaddy/imagemarker/BuildConfig.java
+ com.jimmydaddy.imagemarker.BuildConfig
