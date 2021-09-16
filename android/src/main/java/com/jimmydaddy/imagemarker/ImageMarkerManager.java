@@ -415,6 +415,16 @@ public class ImageMarkerManager extends ReactContextBaseJavaModule {
 
             
             // Draw text background
+            canvas.save();
+            canvas.translate(x, y);
+            float wt = (textWidth + 2*textBackgroundStyle.paddingX)*0.5f;
+            float hgt = (textHeight + 2*textBackgroundStyle.paddingY)*0.5f;
+            canvas.rotate(rotate,wt,hgt);
+            canvas.scale(scale,scale);
+            
+            
+            
+
             if(null != textBackgroundStyle) {
                 Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.LINEAR_TEXT_FLAG);
                 paint.setStyle(Paint.Style.FILL);
@@ -424,8 +434,10 @@ public class ImageMarkerManager extends ReactContextBaseJavaModule {
                 } else if("stretchY".equals(textBackgroundStyle.type)) {
                     canvas.drawRect(x - textBackgroundStyle.paddingX, 0, x + textWidth + textBackgroundStyle.paddingX, height, paint);
                 } else {
-                    RectF r = new RectF(x - textBackgroundStyle.paddingX, y - textBackgroundStyle.paddingY, 
-                    x + textWidth + textBackgroundStyle.paddingX, y + textHeight + textBackgroundStyle.paddingY);
+                    //RectF r = new RectF(x - textBackgroundStyle.paddingX, y - textBackgroundStyle.paddingY, 
+                    //x + textWidth + textBackgroundStyle.paddingX, y + textHeight + textBackgroundStyle.paddingY);
+                    RectF r = new RectF(0, 0, 
+                    textWidth + textBackgroundStyle.paddingX, textHeight + textBackgroundStyle.paddingY);
                     int borderRadius = textBackgroundStyle.borderRadius > 0 ? textBackgroundStyle.borderRadius : 0;
                     canvas.drawRoundRect(r, borderRadius, borderRadius, paint);
                     
@@ -437,14 +449,6 @@ public class ImageMarkerManager extends ReactContextBaseJavaModule {
            
 
             canvas.save();
-            canvas.translate(x, y);
-            canvas.scale(scale,scale);
-            //canvas.save();
-            float wt = (textWidth + 2*textBackgroundStyle.paddingX)*0.5f;
-            float hgt = (textHeight + 2*textBackgroundStyle.paddingY)*0.5f;
-
-            canvas.rotate(rotate,wt,hgt);
-            
             textLayout.draw(canvas);
             canvas.restore();
 
